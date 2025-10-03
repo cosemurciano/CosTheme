@@ -1,0 +1,644 @@
+/*
+ Theme Name: CosTheme
+ Theme URI: http://example.com/costheme
+ Author: Il tuo Nome
+ Author URI: http://example.com
+ Description: Un tema WordPress basato su Bootstrap con alto livello di accessibilità.
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: LICENSE
+ Text Domain: costheme
+ Tags: bootstrap, accessibility, responsive, custom-menu, widgets
+*/
+
+/* Stili generali */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content_page{
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+/* Link */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Testi */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+h2 {
+    font-size: 2em;
+    color: #555;
+}
+
+h3 {
+    font-size: 1.75em;
+    color: #666;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #777;
+}
+
+h5 {
+    font-size: 1.25em;
+    color: #888;
+}
+
+h6 {
+    font-size: 1em;
+    color: #999;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Header */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #e7f3ff;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.topbar .topbar-left,
+.topbar .topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .topbar-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar .topbar-menu ul li {
+    margin-left: 20px;
+}
+
+.topbar .topbar-menu ul li a {
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #f5f5f5;
+    padding: 20px 0;
+}
+
+.footer .footer-widget {
+    padding: 15px;
+}
+
+.footer .footer-widget-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer .text-muted {
+    color: #cccccc;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* Widget */
+.widget {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.widget-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Immagini */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Allineamento immagini */
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.alignnone {
+    display: inline;
+}
+
+/* Stili per category.php */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.archive-meta {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.entry-header {
+    margin-bottom: 15px;
+}
+
+.entry-title {
+    font-size: 1.75em;
+    color: #007BFF;
+}
+
+.entry-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.post-thumbnail {
+    margin-bottom: 15px;
+}
+
+.entry-content {
+    margin-bottom: 15px;
+}
+
+.entry-footer {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.entry-footer span {
+    margin-right: 15px;
+}
+
+.pagination {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.pagination a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.pagination .current {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Stili per single.php */
+.entry-header {
+    margin-bottom: 20px;
+}
+
+.entry-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-thumbnail {
+    margin-bottom: 20px;
+}
+
+.entry-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.entry-content {
+    margin-bottom: 30px;
+}
+
+.entry-footer {
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+.tags-links {
+    margin-right: 10px;
+}
+
+.comments-section {
+    margin-top: 40px;
+}
+
+
+
+/* Link */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+
+/* Header */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.topbar.bg-light,.footer.bg-light{
+	background-color: #e9edf5 !important;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #0b1832;
+    padding: 20px 0;
+}
+
+.footer .footer-widget {
+    padding: 15px;
+}
+
+.footer .footer-widget-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0b1832;
+    margin-bottom: 15px;
+}
+
+.footer .text-muted {
+    color: #cccccc;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    .topbar .topbar-left,
+    .topbar .topbar-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topbar .topbar-menu ul {
+        flex-direction: column;
+    }
+
+    .topbar .topbar-menu ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .col-md-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Stili per tag.php */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.archive-meta {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.entry-header {
+    margin-bottom: 15px;
+}
+
+.entry-title {
+    font-size: 1.75em;
+    color: #007BFF;
+}
+
+.entry-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.post-thumbnail {
+    margin-bottom: 15px;
+}
+
+.entry-content {
+    margin-bottom: 15px;
+}
+
+.entry-footer {
+    font-size: 0.9em;
+    color: #777;
+	margin-bottom: 40px;
+}
+
+.entry-footer span {
+    margin-right: 15px;
+}
+
+.pagination {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.pagination a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.pagination .current {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+ul.navbar-nav a{
+	padding: 5px 15px;
+	display: block;
+}
+
+ul.navbar-nav a:hover{
+	background-color: aliceblue;
+}
+
+img.logo_navbar{
+	max-height: 100px; 
+	width: auto;
+}
+
+.widget h2{
+	font-size: 24px;
+	line-height: 34px;
+}
+
+
+/* Stili per l'icona di WhatsApp */
+a.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 999999;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.whatsapp-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Stili per il Custom Posts Widget */
+.widget_custom_posts_widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget_custom_posts_widget ul li {
+    margin-bottom: 20px;
+	display: block;
+}
+
+.widget_custom_posts_widget ul li img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.widget_custom_posts_widget ul li h4 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.widget_custom_posts_widget ul li p {
+    margin-top: 0px;
+    color: #666;
+	line-height: 20px;
+}
+
+.widget_custom_posts_widget ul li p.post-date{
+	 margin-top: 0;
+	margin: 0;
+	padding: 0;
+    color: #666;
+	font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    .topbar .topbar-left,
+    .topbar .topbar-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topbar .topbar-menu ul {
+        flex-direction: column;
+    }
+
+    .topbar .topbar-menu ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .col-md-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+	
+	
+}
+
